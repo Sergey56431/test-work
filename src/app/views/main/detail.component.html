@@ -1,0 +1,142 @@
+<section class="product">
+  <div class="container">
+    <div class="product-categories">
+      <a href="#">Каталог / </a>
+      <a href="#">Обувь / </a>
+      <a href="#">Кроссовки / </a>
+      <a href="#">Беговые</a>
+    </div>
+    <h1 class="product-title">Кроссовки мужские Skechers Sunny Dale</h1>
+    <!--    блок с ценами, информацией о доставке и кнопками действий-->
+    <div class="product-content">
+      <detail-slider></detail-slider>
+      <div class="product-info">
+        <div class="product-details">
+          <div class="product-detail-sale">
+            <div class="price">
+              <div class="price-without-discount">166 534.00 цена без скидки</div>
+              <div class="price-with-discount">
+                <div class="price-count">122 566 <b>₽</b></div>
+                <div class="price-discount">-15%</div>
+              </div>
+              <div class="product-price-extra">
+                <div class="product-count-inPackage">12 штук в уп.</div>
+                <div class="product-package-checkbox">
+                  <label class="toggler-wrapper style-1">
+                    <input id="checkbox" type="checkbox">
+                    <div class="toggler-slider">
+                      <div class="toggler-knob"></div>
+                    </div>
+                  </label>
+                  <label class="checkbox-label" for="checkbox">Заказать с упаковкой</label>
+                </div>
+              </div>
+            </div>
+            <div class="product-info-delivery">
+              <div class="delivery-blocks">
+                <div class="delivery-block">
+                  <h3 class="delivery-block-title">Завтра</h3>
+                  <div class="delivery-block-text">Доставка</div>
+                </div>
+                <div class="delivery-block">
+                  <h3 class="delivery-block-title">7 шт.</h3>
+                  <div class="delivery-block-text">Тарасовка</div>
+                </div>
+                <div class="delivery-block">
+                  <h3 class="delivery-block-title">7 шт.</h3>
+                  <div class="delivery-block-text">Тарасовка</div>
+                </div>
+              </div>
+            </div>
+            <div class="delivery-actions">
+              <count-selector *ngIf="count > 0" [count]="count" (countChange)="updateCount($event)"></count-selector>
+              <button class="btn" *ngIf="!count || count === 0" (click)="adToCart()">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_3001_1400" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                        height="24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M16.8818 14H9.2638L7.6268 8H19.8818L16.8818 14ZM21.5828 6.948C21.2158 6.354 20.5798 6 19.8818 6H7.0818L6.4648 3.737C6.3458 3.302 5.9508 3 5.4998 3H3.4998C2.9468 3 2.4998 3.448 2.4998 4C2.4998 4.552 2.9468 5 3.4998 5H4.7358L7.5348 15.263C7.6538 15.698 8.0488 16 8.4998 16H17.4998C17.8788 16 18.2248 15.786 18.3948 15.447L21.6708 8.894C21.9838 8.269 21.9498 7.542 21.5828 6.948ZM8 18C7.172 18 6.5 18.671 6.5 19.5C6.5 20.329 7.172 21 8 21C8.828 21 9.5 20.329 9.5 19.5C9.5 18.671 8.828 18 8 18ZM16.5 19.5C16.5 18.671 17.172 18 18 18C18.828 18 19.5 18.671 19.5 19.5C19.5 20.329 18.828 21 18 21C17.172 21 16.5 20.329 16.5 19.5Z"
+                          fill="#071435"/>
+                  </mask>
+                  <g mask="url(#mask0_3001_1400)">
+                    <rect width="24" height="24" transform="translate(0.5)" fill="white"/>
+                  </g>
+                </svg>
+                <span>В корзину</span>
+              </button>
+              <button class="favorite" (click)="addInFavorite()">
+
+                <svg *ngIf="!inFavorite"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_3001_744" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                        height="24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.2197 6C6.3557 6 5.5457 6.334 4.9397 6.941C3.6817 8.201 3.6817 10.252 4.9407 11.514L11.9997 18.585L19.0597 11.514C20.3187 10.252 20.3187 8.201 19.0597 6.941C17.8477 5.726 15.7117 5.728 14.4997 6.941L12.7077 8.736C12.3317 9.113 11.6677 9.113 11.2917 8.736L9.4997 6.94C8.8937 6.334 8.0847 6 7.2197 6ZM11.9997 21C11.7347 21 11.4797 20.895 11.2927 20.706L3.5247 12.926C1.4887 10.886 1.4887 7.567 3.5247 5.527C4.5087 4.543 5.8207 4 7.2197 4C8.6187 4 9.9317 4.543 10.9147 5.527L11.9997 6.614L13.0847 5.528C14.0687 4.543 15.3807 4 16.7807 4C18.1787 4 19.4917 4.543 20.4747 5.527C22.5117 7.567 22.5117 10.886 20.4757 12.926L12.7077 20.707C12.5197 20.895 12.2657 21 11.9997 21Z"
+                          fill="#071435"/>
+                  </mask>
+                  <g mask="url(#mask0_3001_744)">
+                    <rect width="24" height="24" fill="#1551E5"/>
+                  </g>
+                </svg>
+
+                <svg *ngIf="inFavorite" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_3001_1463" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9997 21.8584C11.7347 21.8584 11.4797 21.7534 11.2927 21.5644L3.52471 13.7844C1.48871 11.7444 1.48871 8.4254 3.52471 6.3854C4.50871 5.4014 5.82071 4.8584 7.21971 4.8584C8.61871 4.8584 9.93171 5.4014 10.9147 6.3854L11.9997 7.4724L13.0847 6.3864C14.0687 5.4014 15.3807 4.8584 16.7807 4.8584C18.1787 4.8584 19.4917 5.4014 20.4747 6.3854C22.5117 8.4254 22.5117 11.7444 20.4757 13.7844L12.7077 21.5654C12.5197 21.7534 12.2657 21.8584 11.9997 21.8584Z" fill="#071435"/>
+                  </mask>
+                  <g mask="url(#mask0_3001_1463)">
+                    <rect width="24" height="24" transform="translate(0 0.858398)" fill="#FF3D71"/>
+                  </g>
+                </svg>
+
+              </button>
+            </div>
+          </div>
+          <!--    Блок с характеристиками товара      -->
+          <div class="product-detail-features">
+            <h3 class="features-title">Характеристики</h3>
+            <div class="feature-items">
+              <div class="feature-item">
+                <h4 class="feature-item-title">ELC00696</h4>
+                <div class="feature-item-text">Код поставщика</div>
+              </div>
+              <div class="feature-item">
+                <h4 class="feature-item-title">ELC00696</h4>
+                <div class="feature-item-text">Код РАЭК</div>
+              </div>
+              <div class="feature-item">
+                <h4 class="feature-item-title">Electric used</h4>
+                <div class="feature-item-text">Бренд</div>
+              </div>
+              <div class="feature-item">
+                <h4 class="feature-item-title">ELC0200000696</h4>
+                <div class="feature-item-text">Код производителя</div>
+              </div>
+              <div class="feature-item">
+                <h4 class="feature-item-title">ELC0200000696</h4>
+                <div class="feature-item-text">Артикул</div>
+              </div>
+              <div class="feature-item">
+                <h4 class="feature-item-title">ELC00696</h4>
+                <div class="feature-item-text">Код ЕТМ</div>
+              </div>
+              <div class="feature-item">
+                <h4 class="feature-item-title">ELC00696</h4>
+                <div class="feature-item-text">Серия</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--        Блок с описанием товара     -->
+        <div class="product-info-description">
+          <h2 class="product-description-title">Описание товара</h2>
+          <div class="product-description-text">Создание приверженного покупателя специфицирует неопровержимый
+            комплексный анализ ситуации. CTR существенно индуцирует из ряда вон выходящий SWOT-анализ. Воздействие на
+            потребителя определяет возрастающий интеграл по поверхности, что известно даже школьникам. Отсюда
+            естественно следует, что коммуникация уравновешивает косвенный фактор коммуникации. Поле направлений
+            естественно допускает экспериментальный скачок функции, таким образом сбылась мечта идиота - утверждение
+            полностью доказано. Арифметическая прогрессия притягивает линейно зависимый пул лояльных изданий.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,149 @@
+@import "../../../../assets/styles/variables";
+
+.header {
+
+  .header-top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid $grey-border-color;
+
+    .btn {
+      padding: 12px 24px;
+      font-family: 'Ghotam-bold', sans-serif;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      width: 128px;
+      height: 48px;
+
+      span {
+        margin-left: 7px;
+      }
+    }
+
+    .header-notice_favorite {
+      display: flex;
+      align-items: center;
+
+      .notice {
+        margin-right: 24px;
+      }
+
+      .border-line {
+        width: 1px;
+        height: 48px;
+        background-color: $grey-border-color;
+      }
+
+      .favorite {
+        margin-left: 24px;
+      }
+    }
+
+    .header-cart {
+      display: flex;
+      align-items: center;
+      background-color: $second-btn;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      .header-cart-icon {
+        margin-top: 2px;
+        margin-right: 12px;
+      }
+
+      .header-cart-price {
+        font-family: 'Ghotam-bold', sans-serif;
+        line-height: 114%;
+        color: $blue-color;
+      }
+    }
+
+    .header-profile {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .header-profile-image {
+        height: 32px;
+        width: 32px;
+        margin-right: 16px;
+      }
+
+      .header-profile-name {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .header-bottom-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid $grey-border-color;
+
+    .header-bottom-menu {
+
+      .menu-items {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        .menu-item {
+          font-size: 16px;
+          margin-right: 24px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .header-bottom-actions {
+      display: flex;
+      align-items: center;
+
+      .header-bottom-action {
+        margin-right: 24px;
+
+        a {
+          color: $blue-color;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-top: 2px;
+          }
+        }
+
+        &.manager-ref {
+          border-radius: 8px;
+          padding: 8px 12px;
+          background-color: $second-btn;
+
+          svg {
+            margin-right: 8px;
+          }
+        }
+
+        &.sales {
+
+          svg {
+            margin-right: 16px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+

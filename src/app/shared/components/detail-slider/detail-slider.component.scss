@@ -1,0 +1,47 @@
+@import "src/assets/styles/variables";
+
+.slider {
+  width: 400px;
+  position: relative;
+
+  .slider-main-image {
+
+    img {
+      border-radius: 24px;
+    }
+  }
+
+  .slider-side-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    cursor: pointer;
+    column-gap: 12px;
+
+    &.active {
+      box-shadow: 0 0 10px #050D23;
+    }
+  }
+
+  .slider-select {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    background-color: $second-btn;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 8px 0;
+    height: 63px;
+    width: 38px;
+
+    &.next {
+      right: 0;
+    }
+
+    &.prev {
+      left: 0;
+    }
+  }
+}

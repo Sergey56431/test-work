@@ -1,0 +1,26 @@
+@import "src/assets/styles/variables";
+
+.count-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid $blue-color;
+  border-radius: 8px;
+  padding: 8px 12px 8px 16px;
+  width: 284px;
+  height: 56px;
+  box-sizing: border-box;
+  box-shadow: 0 0 6px 0 #bac4e0;
+
+  .count-btn {
+    cursor: pointer;
+  }
+
+  .count-in-cart {
+    border: none;
+    outline: none;
+    width: 192px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
